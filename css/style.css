@@ -262,8 +262,8 @@ ul {
    ========================================================================== */
 .about {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 32px;
+  grid-template-columns: minmax(0, 360px) 1fr;
+  gap: 36px;
   align-items: center;
   margin-top: 30px;
 }
@@ -271,29 +271,30 @@ ul {
 .about__photo-wrap {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 
 .about__photo-wrap::before {
   content: "";
   position: absolute;
-  inset: -12%;
-  background: radial-gradient(circle at 50% 38%, var(--accent) 0%, transparent 68%);
-  opacity: 0.5;
-  filter: blur(26px);
+  inset: -10%;
+  background: radial-gradient(circle at 50% 45%, var(--accent) 0%, transparent 68%);
+  opacity: 0.45;
+  filter: blur(28px);
   z-index: 0;
 }
 
 .about__photo {
   position: relative;
   z-index: 1;
-  aspect-ratio: 4 / 5;
   width: 100%;
-  object-fit: contain;
-  object-position: bottom;
-  background: transparent;
-  filter: drop-shadow(0 18px 28px rgba(42, 32, 19, 0.22));
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid var(--bg);
+  outline: 1px solid var(--border);
+  box-shadow: 0 18px 32px -12px rgba(42, 32, 19, 0.35);
 }
 
 .about__text p {
@@ -536,8 +537,8 @@ ul {
     text-align: center;
   }
 
-  .about__photo {
-    max-width: 200px;
+  .about__photo-wrap {
+    max-width: 340px;
     margin: 0 auto;
   }
 
