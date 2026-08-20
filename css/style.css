@@ -131,6 +131,36 @@ ul {
   margin-bottom: 20px;
 }
 
+.hero__photo-wrap {
+  position: relative;
+  width: 200px;
+  margin: 0 auto 24px;
+}
+
+.hero__photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -14%;
+  background: radial-gradient(circle at 50% 42%, var(--accent) 0%, transparent 68%);
+  opacity: 0.4;
+  filter: blur(26px);
+  z-index: 0;
+}
+
+.hero__photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 18px;
+  transform: rotate(-3deg);
+  border: 3px solid var(--bg);
+  outline: 1px solid var(--border);
+  box-shadow: 0 16px 30px -12px rgba(0, 0, 0, 0.55);
+}
+
 .hero__title {
   font-size: clamp(28px, 5vw, 44px);
   font-weight: 800;
