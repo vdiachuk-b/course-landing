@@ -351,8 +351,14 @@ ul {
   margin-bottom: 12px;
 }
 
-.stat-card {
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
   margin-top: 30px;
+}
+
+.stat-card {
   padding: 24px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
