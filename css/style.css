@@ -2,13 +2,14 @@
    ЗМІННІ / БАЗА
    ========================================================================== */
 :root {
-  --bg: #0b0b10;
-  --bg-alt: #131319;
-  --text: #f2f2f5;
-  --text-muted: #a6a6b3;
-  --accent: #8b5cf6;
-  --accent-2: #ec4899;
-  --border: #24242e;
+  --bg: #fdf7ea;
+  --bg-alt: #f8ecd0;
+  --text: #2a2013;
+  --text-muted: #7c6b4f;
+  --accent: #db8a1d;
+  --accent-2: #b85c0f;
+  --on-accent: #241705;
+  --border: #ecdcb0;
   --radius: 14px;
   --container-width: 1080px;
 }
@@ -61,8 +62,8 @@ ul {
   padding: 16px 32px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-  font-weight: 600;
+  color: var(--on-accent);
+  font-weight: 700;
   font-size: 16px;
   text-align: center;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -72,7 +73,7 @@ ul {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 10px 30px rgba(219, 138, 29, 0.35);
 }
 
 .btn--small {
@@ -92,7 +93,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(11, 11, 16, 0.85);
+  background: rgba(253, 247, 234, 0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -116,7 +117,7 @@ ul {
 .hero {
   padding: 60px 0 50px;
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.18), transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(219, 138, 29, 0.16), transparent 60%);
 }
 
 .badge {
@@ -157,7 +158,7 @@ ul {
 
 .hero__points li::before {
   content: "✓ ";
-  color: var(--accent);
+  color: var(--accent-2);
   font-weight: 700;
 }
 
@@ -261,15 +262,38 @@ ul {
    ========================================================================== */
 .about {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 32px;
   align-items: center;
   margin-top: 30px;
 }
 
+.about__photo-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.about__photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  background: radial-gradient(circle at 50% 38%, var(--accent) 0%, transparent 68%);
+  opacity: 0.5;
+  filter: blur(26px);
+  z-index: 0;
+}
+
 .about__photo {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  background: transparent;
+  filter: drop-shadow(0 18px 28px rgba(42, 32, 19, 0.22));
 }
 
 .about__text p {
@@ -290,7 +314,7 @@ ul {
   display: block;
   font-size: 28px;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .stat-card__label {
@@ -466,7 +490,7 @@ ul {
 .accordion__item summary::after {
   content: "+";
   font-size: 20px;
-  color: var(--accent);
+  color: var(--accent-2);
   margin-left: 12px;
 }
 
@@ -485,7 +509,7 @@ ul {
    ========================================================================== */
 .cta-final {
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.15), transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(184, 92, 15, 0.15), transparent 60%);
 }
 
 .cta-final .btn {
