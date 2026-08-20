@@ -1,0 +1,529 @@
+/* ==========================================================================
+   ЗМІННІ / БАЗА
+   ========================================================================== */
+:root {
+  --bg: #0b0b10;
+  --bg-alt: #131319;
+  --text: #f2f2f5;
+  --text-muted: #a6a6b3;
+  --accent: #8b5cf6;
+  --accent-2: #ec4899;
+  --border: #24242e;
+  --radius: 14px;
+  --container-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   КНОПКИ
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+}
+
+.btn--small {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.btn--large {
+  padding: 18px 44px;
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 11, 16, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+  padding: 60px 0 50px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.18), transparent 60%);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+
+.hero__subtitle {
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 24px;
+  font-size: 17px;
+}
+
+.hero__points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
+  margin-bottom: 28px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.hero__points li::before {
+  content: "✓ ";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero__note {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   ЦІНА
+   ========================================================================== */
+.price-block {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: 800;
+}
+
+.price--old {
+  font-size: 20px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.price--new {
+  font-size: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.price-block--center {
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   ТАЙМЕР
+   ========================================================================== */
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.timer__unit {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-width: 64px;
+  text-align: center;
+}
+
+.timer__unit span {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.timer__unit small {
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   СЕКЦІЇ (спільне)
+   ========================================================================== */
+.section {
+  padding: 70px 0;
+}
+
+.section--alt {
+  background: var(--bg-alt);
+}
+
+.section__title {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section__subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+/* ==========================================================================
+   ПРО АВТОРА
+   ========================================================================== */
+.about {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about__photo {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.about__text p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.stat-card {
+  margin-top: 30px;
+  padding: 24px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.stat-card__number {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.stat-card__label {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   КАРТКИ (аудиторія)
+   ========================================================================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   МЕТОД (features)
+   ========================================================================== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature {
+  text-align: center;
+  padding: 24px;
+}
+
+.feature__icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-weight: 800;
+}
+
+.feature h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.feature p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   ДОКАЗ / PROOF
+   ========================================================================== */
+.proof {
+  text-align: center;
+}
+
+.proof__mock {
+  max-width: 480px;
+  margin: 30px auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   ЩО ОТРИМАЄТЕ
+   ========================================================================== */
+.included-list {
+  max-width: 640px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.included-list li {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  color: var(--text-muted);
+}
+
+.included-list li strong {
+  color: var(--text);
+}
+
+/* ==========================================================================
+   ГАРАНТІЯ
+   ========================================================================== */
+.guarantee {
+  text-align: center;
+  max-width: 560px;
+}
+
+.guarantee__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.guarantee p {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   ПРОГРАМА / АКОРДЕОН
+   ========================================================================== */
+.accordion {
+  max-width: 680px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion__item {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 4px 20px;
+}
+
+.accordion__item summary {
+  cursor: pointer;
+  padding: 16px 0;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__item summary::after {
+  content: "+";
+  font-size: 20px;
+  color: var(--accent);
+  margin-left: 12px;
+}
+
+.accordion__item[open] summary::after {
+  content: "–";
+}
+
+.accordion__content {
+  padding-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   ФІНАЛЬНИЙ CTA
+   ========================================================================== */
+.cta-final {
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.15), transparent 60%);
+}
+
+.cta-final .btn {
+  margin-top: 24px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   АДАПТИВ
+   ========================================================================== */
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about__photo {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .cards,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .timer__unit {
+    min-width: 56px;
+    padding: 8px 10px;
+  }
+}
