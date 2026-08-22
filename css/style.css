@@ -574,6 +574,94 @@ ul {
   border-top: 1px solid var(--border);
 }
 
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 18px;
+}
+
+.footer__links a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__links a:hover {
+  color: var(--text);
+}
+
+/* ==========================================================================
+   ЮРИДИЧНІ СТОРІНКИ (політика конфіденційності, оферта)
+   ========================================================================== */
+.legal {
+  padding: 48px 0 80px;
+  max-width: 760px;
+}
+
+.legal__back {
+  display: inline-block;
+  color: var(--accent-2);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.legal h1 {
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.legal__updated {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+.legal h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 36px 0 12px;
+}
+
+.legal p,
+.legal li {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.legal ul,
+.legal ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.legal ul li {
+  list-style: disc;
+}
+
+.legal ol li {
+  list-style: decimal;
+}
+
+.legal strong {
+  color: var(--text);
+}
+
+.legal a {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
 /* ==========================================================================
    ДЕСКТОП — текст ліворуч (напис над заголовком), фото праворуч
    ========================================================================== */
