@@ -571,29 +571,36 @@ ul {
 }
 
 /* ==========================================================================
-   ДЕСКТОП — фото пливе праворуч і трохи перекриває заголовок
+   ДЕСКТОП — текст ліворуч (напис над заголовком), фото праворуч
    ========================================================================== */
 @media (min-width: 769px) {
   .hero__inner {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(0, 480px) 240px;
+    grid-template-areas:
+      "kicker photo"
+      "content photo";
+    align-items: start;
     justify-content: center;
-    gap: 64px;
+    column-gap: 64px;
+    row-gap: 4px;
     text-align: left;
   }
 
+  .kicker {
+    grid-area: kicker;
+  }
+
   .hero__content {
-    flex: 1 1 480px;
-    max-width: 480px;
+    grid-area: content;
     min-width: 0;
-    order: 1;
   }
 
   .hero__photo-wrap {
-    flex: 0 0 240px;
+    grid-area: photo;
+    align-self: center;
     width: 240px;
     margin: 0;
-    order: 2;
   }
 
   .kicker,
