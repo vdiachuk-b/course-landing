@@ -157,22 +157,6 @@ ul {
   font-size: 17px;
 }
 
-.hero__points {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 24px;
-  margin-bottom: 28px;
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-.hero__points li::before {
-  content: "✓ ";
-  color: var(--accent-2);
-  font-weight: 700;
-}
-
 .circled {
   position: relative;
   display: inline-block;
@@ -747,10 +731,6 @@ ul {
     margin-left: 0;
     margin-right: 0;
     max-width: none;
-  }
-
-  .hero__points {
-    justify-content: flex-start;
   }
 
   .price-block {
