@@ -549,29 +549,58 @@ ul {
 }
 
 /* ==========================================================================
-   ПРОГРАМА / ЗАВЖДИ ВІДКРИТИЙ СПИСОК
+   ПРОГРАМА / ВЕРТИКАЛЬНИЙ ТАЙМЛАЙН
    ========================================================================== */
-.program-list {
-  max-width: 680px;
+.program-timeline {
+  max-width: 620px;
   margin: 30px auto 0;
+  padding-left: 54px;
+  position: relative;
+}
+
+.program-timeline::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+}
+
+.program-timeline__item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.program-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.program-timeline__dot {
+  position: absolute;
+  left: -54px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--on-accent);
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  z-index: 1;
 }
 
-.program-day {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.program-day h3 {
+.program-timeline__item h3 {
+  font-size: 17px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-.program-day p {
+.program-timeline__item p {
   color: var(--text-muted);
   font-size: 14px;
 }
