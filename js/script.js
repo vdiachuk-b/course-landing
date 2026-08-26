@@ -38,3 +38,13 @@ function startCountdown(container) {
 }
 
 document.querySelectorAll(".timer[data-deadline]").forEach(startCountdown);
+
+// ==========================================================================
+// META PIXEL — InitiateCheckout при переході на оплату WayForPay
+// ==========================================================================
+const checkoutBtn = document.getElementById("checkout-btn");
+if (checkoutBtn && typeof fbq === "function") {
+  checkoutBtn.addEventListener("click", function () {
+    fbq("track", "InitiateCheckout", { value: 299, currency: "UAH" });
+  });
+}

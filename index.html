@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Нотна грамота — навчіться читати ноти за 3 дні</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '669918802525716');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=669918802525716&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta name="description" content="Мінікурс «Нотна грамота» для дорослих-початківців: за 3 дні навчіться впевнено читати ноти з нуля.">
 
 <!-- Open Graph (превʼю в соцмережах) -->
@@ -243,12 +261,12 @@
     </div>
 
     <!--
-      Тут замініть на форму збору заявок — GitHub Pages не має бекенду,
-      тому підключіть Google Forms / Tally / Telegram-бот тощо.
-      Наприклад:
-      <iframe src="ВАША_ФОРМА" width="100%" height="600"></iframe>
+      TODO: замінити href на посилання оплати WayForPay.
+      У налаштуваннях WayForPay вкажіть returnUrl = thank-you.html,
+      щоб після успішної оплати покупця перекинуло на сторінку подяки
+      з подією Purchase для Meta Pixel.
     -->
-    <a href="#" class="btn btn--primary btn--large">Приєднатись</a>
+    <a href="#" id="checkout-btn" class="btn btn--primary btn--large">Приєднатись</a>
   </div>
 </section>
 
