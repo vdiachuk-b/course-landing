@@ -2,14 +2,14 @@
    ЗМІННІ / БАЗА
    ========================================================================== */
 :root {
-  --bg: #fbf6f0;
-  --bg-alt: #f5ebe0;
-  --text: #2e2620;
-  --text-muted: #7a6b5d;
-  --accent: #4a90d9;
-  --accent-2: #f4a97a;
-  --on-accent: #241a10;
-  --border: #e6d9c8;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fc;
+  --text: #1a1a2e;
+  --text-muted: #5c5c70;
+  --accent: #2563eb;
+  --accent-2: #2563eb;
+  --on-accent: #ffffff;
+  --border: #eaebf0;
   --radius: 14px;
   --container-width: 1080px;
 }
@@ -60,8 +60,8 @@ ul {
 .btn {
   display: inline-block;
   padding: 16px 32px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: var(--radius);
+  background: var(--accent);
   color: var(--on-accent);
   font-weight: 700;
   font-size: 16px;
@@ -69,11 +69,12 @@ ul {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.5);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(74, 144, 217, 0.30);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
 }
 
 .btn--small {
@@ -92,7 +93,7 @@ ul {
 .hero {
   padding: 48px 0 50px;
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, rgba(74, 144, 217, 0.14), transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.10), transparent 60%);
   overflow: hidden;
 }
 
@@ -101,14 +102,15 @@ ul {
 }
 
 .kicker {
+  display: inline-block;
   font-family: "Unbounded", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(15px, 2vw, 19px);
+  font-size: clamp(13px, 1.6vw, 15px);
   letter-spacing: 0.01em;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background: #eef2ff;
+  color: var(--accent);
+  padding: 8px 18px;
+  border-radius: 999px;
   margin-bottom: 32px;
 }
 
@@ -351,6 +353,10 @@ ul {
 
 .card {
   text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
 }
 
 .card img {
@@ -387,18 +393,23 @@ ul {
 .feature {
   text-align: center;
   padding: 24px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .feature__icon {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 1;
-  margin: 0 0 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 14px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
 }
 
 .feature h3 {
@@ -483,7 +494,8 @@ ul {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--accent);
+  color: var(--on-accent);
   font-size: 26px;
   font-weight: 800;
   margin-bottom: 16px;
@@ -608,7 +620,7 @@ ul {
    ========================================================================== */
 .cta-final {
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, rgba(244, 169, 122, 0.16), transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.10), transparent 60%);
 }
 
 .cta-final .btn {
