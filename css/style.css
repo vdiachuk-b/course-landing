@@ -333,24 +333,11 @@ ul {
 }
 
 .card {
-  text-align: center;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
 }
-
-.card img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 18px;
-  max-width: 78%;
-  margin: 0 auto 18px;
-  box-shadow: 0 14px 26px -10px rgba(0, 0, 0, 0.5);
-}
-
-.card--tilt-left img { transform: rotate(-2.5deg); }
-.card--tilt-right img { transform: rotate(2.5deg); }
 
 .card h3 {
   margin-bottom: 8px;
