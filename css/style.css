@@ -158,26 +158,8 @@ ul {
   font-size: 17px;
 }
 
-.circled {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.circled__mark {
-  position: absolute;
-  left: -12%;
-  right: -12%;
-  top: -30%;
-  bottom: -30%;
-  width: 124%;
-  height: 160%;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 5;
-  stroke-linecap: round;
-  z-index: -1;
-  pointer-events: none;
+.hl {
+  color: var(--accent);
 }
 
 .hero__note {
