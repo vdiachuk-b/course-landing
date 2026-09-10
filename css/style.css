@@ -261,6 +261,45 @@ ul {
 /* ==========================================================================
    ПРО АВТОРА
    ========================================================================== */
+/* ==========================================================================
+   БІЛЬ / ПРОБЛЕМА
+   ========================================================================== */
+.pain {
+  max-width: 620px;
+  text-align: center;
+}
+
+.pain__list {
+  text-align: left;
+  margin: 28px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pain__list li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pain__list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pain__bridge {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+}
+
 .about-mini {
   text-align: center;
   max-width: 640px;
