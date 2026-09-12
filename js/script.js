@@ -44,6 +44,33 @@ function startCountdown(container) {
 document.querySelectorAll(".timer").forEach(startCountdown);
 
 // ==========================================================================
+// SCROLL REVEAL — плавна поява елементів при прокрутці до них
+// ==========================================================================
+const revealEls = document.querySelectorAll(".reveal");
+if (revealEls.length) {
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    revealEls.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    revealEls.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  }
+}
+
+// ==========================================================================
 // META PIXEL — InitiateCheckout при переході на оплату WayForPay
 // ==========================================================================
 const checkoutBtn = document.getElementById("checkout-btn");
