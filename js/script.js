@@ -46,7 +46,7 @@ document.querySelectorAll(".timer").forEach(startCountdown);
 // ==========================================================================
 // SCROLL REVEAL — плавна поява елементів при прокрутці до них
 // ==========================================================================
-const revealEls = document.querySelectorAll(".reveal");
+const revealEls = document.querySelectorAll(".reveal, .pop-reveal");
 if (revealEls.length) {
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(

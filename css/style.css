@@ -303,6 +303,64 @@ ul {
 .pain .reveal:nth-child(3) { transition-delay: 0.3s; }
 .pain .reveal:nth-child(4) { transition-delay: 0.45s; }
 
+/* ==========================================================================
+   LOAD FADE — заголовок hero "проявляється" з сірого в колір при завантаженні
+   ========================================================================== */
+.load-fade {
+  animation: loadFadeColor 1s ease forwards;
+}
+
+.load-fade .hl {
+  animation: loadFadeAccent 1s ease forwards;
+}
+
+@keyframes loadFadeColor {
+  from { color: #d8dae8; }
+  to { color: var(--text); }
+}
+
+@keyframes loadFadeAccent {
+  from { color: #d8dae8; }
+  to { color: var(--accent); }
+}
+
+.load-fade-sub,
+.load-fade-price,
+.load-fade-btn {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.load-fade-sub { animation-delay: 0.5s; }
+.load-fade-price { animation-delay: 0.65s; }
+.load-fade-btn { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   POP REVEAL — картки "встають" з невеликим масштабуванням при скролі
+   ========================================================================== */
+.pop-reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pop-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.cards .pop-reveal:nth-child(1),
+.features .pop-reveal:nth-child(1) { transition-delay: 0s; }
+.cards .pop-reveal:nth-child(2),
+.features .pop-reveal:nth-child(2) { transition-delay: 0.12s; }
+.cards .pop-reveal:nth-child(3),
+.features .pop-reveal:nth-child(3) { transition-delay: 0.24s; }
+
 .about-mini {
   text-align: center;
   max-width: 640px;
